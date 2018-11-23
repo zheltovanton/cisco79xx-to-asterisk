@@ -1,0 +1,4 @@
+<DIALTEMPLATE>
+<TEMPLATE MATCH="...." TIMEOUT="1"/><!-- Internal Ext. -->
+<TEMPLATE MATCH="*" TIMEOUT="10"/> <!-- Anything else -->
+</DIALTEMPLATE>

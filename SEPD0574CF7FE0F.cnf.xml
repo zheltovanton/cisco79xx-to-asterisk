@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<device  xsi:type="axl:XIPPhone" ctiid="94">
+
+<fullConfig>true</fullConfig>
+<deviceProtocol>SIP</deviceProtocol>
+<sshUserId>root</sshUserId>
+<sshPassword>pass</sshPassword>
+
+<devicePool>
+	<dateTimeSetting>
+		<dateTemplate>D-M-Y</dateTemplate>
+		<timeZone>Saudi Arabia Standard Time</timeZone>
+                   <ntps>
+
+                    <ntp>
+
+                       <name>SERVERIP</name>
+
+                       <ntpMode>Unicast</ntpMode>
+
+                    </ntp>
+
+                   </ntps>
+
+        </dateTimeSetting>
+ 
+	<callManagerGroup>
+		<members> <member priority="0"> <callManager>
+			<name>SERVERIP</name>
+			<ports>
+				<ethernetPhonePort>2000</ethernetPhonePort>
+				<sipPort>5060</sipPort>
+				<securedSipPort>5061</securedSipPort>
+			</ports>
+			<processNodeName>SERVERIP</processNodeName>
+		</callManager> </member> </members>
+	</callManagerGroup>
+
+	<srstInfo>
+		<srstOption>Disable</srstOption>
+		<ipAddr1></ipAddr1> <port1>2000</port1>
+		<ipAddr2></ipAddr2> <port2>2000</port2>
+		<ipAddr3></ipAddr3> <port3>2000</port3>
+		<sipIpAddr1></sipIpAddr1> <sipPort1>5060</sipPort1>
+		<sipIpAddr2></sipIpAddr2> <sipPort2>5060</sipPort2>
+		<sipIpAddr3></sipIpAddr3> <sipPort3>5060</sipPort3>
+		<isSecure>false</isSecure>
+	</srstInfo>
+
+	<connectionMonitorDuration>120</connectionMonitorDuration>
+</devicePool>
+
+<sipProfile>
+	<sipProxies>
+		<backupProxy></backupProxy> <backupProxyPort></backupProxyPort>
+		<emergencyProxy></emergencyProxy> <emergencyProxyPort></emergencyProxyPort>
+		<outboundProxy></outboundProxy> <outboundProxyPort></outboundProxyPort>
+		<registerWithProxy>true</registerWithProxy>
+	</sipProxies>
+	<sipCallFeatures>
+		<cnfJoinEnabled>true</cnfJoinEnabled>
+		<callForwardURI>x-cisco-serviceuri-cfwdall</callForwardURI>
+		<callPickupURI>x-cisco-serviceuri-pickup</callPickupURI>
+		<callPickupListURI>x-cisco-serviceuri-opickup</callPickupListURI>
+		<callPickupGroupURI>x-cisco-serviceuri-gpickup</callPickupGroupURI>
+		<meetMeServiceURI>x-cisco-serviceuri-meetme</meetMeServiceURI>
+		<abbreviatedDialURI>x-cisco-serviceuri-abbrdial</abbreviatedDialURI>
+		<rfc2543Hold>false</rfc2543Hold>
+		<callHoldRingback>2</callHoldRingback>
+		<localCfwdEnable>true</localCfwdEnable>
+		<semiAttendedTransfer>true</semiAttendedTransfer>
+		<anonymousCallBlock>2</anonymousCallBlock>
+		<callerIdBlocking>2</callerIdBlocking>
+		<dndControl>0</dndControl>
+		<remoteCcEnable>true</remoteCcEnable>
+		<retainForwardInformation>false</retainForwardInformation>
+	</sipCallFeatures>
+	<sipStack>
+		<sipInviteRetx>6</sipInviteRetx>
+		<sipRetx>10</sipRetx>
+		<timerInviteExpires>180</timerInviteExpires>
+		<timerRegisterExpires>360</timerRegisterExpires>
+		<timerRegisterDelta>5</timerRegisterDelta>
+		<timerKeepAliveExpires>120</timerKeepAliveExpires>
+		<timerSubscribeExpires>120</timerSubscribeExpires>
+		<timerSubscribeDelta>5</timerSubscribeDelta>
+		<timerT1>500</timerT1>
+		<timerT2>4000</timerT2>
+		<maxRedirects>70</maxRedirects>
+		<remotePartyID>true</remotePartyID>
+		<userInfo>None</userInfo>
+	</sipStack>
+
+	<autoAnswerTimer>1</autoAnswerTimer>
+	<autoAnswerAltBehavior>false</autoAnswerAltBehavior>
+	<autoAnswerOverride>true</autoAnswerOverride>
+	<transferOnhookEnabled>false</transferOnhookEnabled>
+	<enableVad>false</enableVad>
+	<preferredCodec>g729a</preferredCodec>
+	<dtmfAvtPayload>101</dtmfAvtPayload>
+	<dtmfDbLevel>3</dtmfDbLevel>
+	<!-- ??? -->
+	<dtmfOutofBand>avt</dtmfOutofBand>
+	<kpml>3</kpml>
+	<alwaysUsePrimeLine>false</alwaysUsePrimeLine>
+	<alwaysUsePrimeLineVoiceMail>false</alwaysUsePrimeLineVoiceMail>
+	<phoneLabel>Tambovenergo</phoneLabel>
+	<stutterMsgWaiting>2</stutterMsgWaiting>
+	<callStats>true</callStats>
+	<offhookToFirstDigitTimer>15000</offhookToFirstDigitTimer>
+	<silentPeriodBetweenCallWaitingBursts>10</silentPeriodBetweenCallWaitingBursts>
+	<disableLocalSpeedDialConfig>true</disableLocalSpeedDialConfig>
+	<poundEndOfDial>false</poundEndOfDial>
+	<startMediaPort>16384</startMediaPort>
+	<stopMediaPort>32766</stopMediaPort>
+
+	<sipLines>
+		<line  button="1" lineIndex="1">
+			<featureID>9</featureID>
+			<proxy>SERVERIP</proxy>
+			<port>5060</port>
+			<autoAnswer> <autoAnswerEnabled>2</autoAnswerEnabled> </autoAnswer>
+			<callWaiting>3</callWaiting>
+
+			<sharedLine>true</sharedLine>
+			<messageWaitingLampPolicy>3</messageWaitingLampPolicy>
+			<messagesNumber>555</messagesNumber>
+			<ringSettingIdle>4</ringSettingIdle>
+			<ringSettingActive>5</ringSettingActive>
+			<forwardCallInfoDisplay>
+				<callerName>true</callerName>
+				<callerNumber>false</callerNumber>
+				<redirectedNumber>false</redirectedNumber>
+				<dialedNumber>true</dialedNumber>
+			</forwardCallInfoDisplay>
+			<!-- ***************************** -->
+			<featureLabel>2554</featureLabel>
+			<displayName>2554</displayName>
+			<name>2554</name>
+			<authName>2554</authName>
+			<authPassword>cisco</authPassword>
+		</line>
+	</sipLines>
+	<externalNumberMask>2554</externalNumberMask>
+	<!-- ***************************** -->
+
+	<voipControlPort>5060</voipControlPort>
+	<dscpForAudio>184</dscpForAudio>
+	<ringSettingBusyStationPolicy>0</ringSettingBusyStationPolicy>
+	<dialTemplate>dialplan.xml</dialTemplate>
+</sipProfile>
+
+<commonProfile>
+	<phonePassword></phonePassword>
+	<backgroundImageAccess>true</backgroundImageAccess>
+	<callLogBlfEnabled>2</callLogBlfEnabled>
+</commonProfile>
+
+<loadInformation>SIP11.8-5-3S</loadInformation>
+
+<vendorConfig>
+	<disableSpeaker>false</disableSpeaker>
+	<disableSpeakerAndHeadset>false</disableSpeakerAndHeadset>
+	<forwardingDelay>1</forwardingDelay>
+	<pcPort>0</pcPort>
+	<settingsAccess>1</settingsAccess>
+	<garp>0</garp>
+	<voiceVlanAccess>0</voiceVlanAccess>
+	<videoCapability>0</videoCapability>
+	<autoSelectLineEnable>1</autoSelectLineEnable>
+	<webAccess>1</webAccess>
+	<daysDisplayNotActive>1,7</daysDisplayNotActive>
+	<displayOnTime>09:00</displayOnTime>
+	<displayOnDuration>12:00</displayOnDuration>
+	<displayIdleTimeout>01:00</displayIdleTimeout>
+	<spanToPCPort>1</spanToPCPort>
+	<loggingDisplay>2</loggingDisplay>
+	<loadServer>SERVERIP</loadServer>
+	<recordingTone>0</recordingTone>
+	<recordingToneLocalVolume>100</recordingToneLocalVolume>
+	<recordingToneRemoteVolume>50</recordingToneRemoteVolume>
+	<recordingToneDuration></recordingToneDuration>
+	<displayOnWhenIncomingCall>0</displayOnWhenIncomingCall>
+	<rtcp>0</rtcp>
+	<moreKeyReversionTimer>5</moreKeyReversionTimer>
+	<autoCallSelect>1</autoCallSelect>
+	<logServer>SERVERIP</logServer>
+	<g722CodecSupport>0</g722CodecSupport>
+	<headsetWidebandUIControl>0</headsetWidebandUIControl>
+	<handsetWidebandUIControl>0</handsetWidebandUIControl>
+	<headsetWidebandEnable>0</headsetWidebandEnable>
+	<handsetWidebandEnable>0</handsetWidebandEnable>
+	<peerFirmwareSharing>0</peerFirmwareSharing>
+	<enableCdpSwPort>1</enableCdpSwPort>
+	<enableCdpPcPort>1</enableCdpPcPort>
+</vendorConfig>
+
+<versionStamp>1200501729-ee9247c4-1a10-481c-8fdc-612737c5aadd</versionStamp>
+
+
+<userLocale>
+	<name></name>
+	<langCode>ru_RU</langCode>
+	<version></version>
+	<winCharSet>utf-8</winCharSet>
+</userLocale>
+
+<networkLocale>Russian</networkLocale>
+<networkLocaleInfo>
+	<name>Russian</name>
+	<version></version>
+</networkLocaleInfo>
+
+<deviceSecurityMode>1</deviceSecurityMode>
+<idleTimeout>0</idleTimeout>
+<authenticationURL>http://SERVERIP/ccmcip/authenticate.jsp</authenticationURL>
+<directoryURL>http://SERVERIP/ccmcip/xmldirectory.jsp</directoryURL>
+<idleURL></idleURL>
+<informationURL>http://SERVERIP/ccmcip/GetTelecasterHelpText.jsp</informationURL>
+<messagesURL></messagesURL>
+<proxyServerURL></proxyServerURL>
+<servicesURL>http://SERVERIP/cisco/phonebook.php</servicesURL>
+<dscpForSCCPPhoneConfig>96</dscpForSCCPPhoneConfig>
+<dscpForSCCPPhoneServices>0</dscpForSCCPPhoneServices>
+<dscpForCm2Dvce>96</dscpForCm2Dvce>
+<transportLayerProtocol>4</transportLayerProtocol>
+<singleButtonBarge>0</singleButtonBarge>
+
+<capfAuthMode>0</capfAuthMode>
+<capfList> <capf>
+	<phonePort>3804</phonePort>
+	<processNodeName>SERVERIP</processNodeName>
+</capf> </capfList>
+
+<certHash></certHash>
+<encrConfig>false</encrConfig>
+<advertiseG722Codec>1</advertiseG722Codec>
+
+</device>

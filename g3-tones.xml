@@ -1,0 +1,37 @@
+﻿<tones>
+		<trkLocaleName></trkLocaleName>
+		<trkBaseClearcaseVersion />
+		<trkTranslationVersion />
+		<tone c1="31164" i1="-1772" c2="30743" i2="-1985" c3="31164" i3="-1772" c4="30743" i4="-1985" d="34" t="ringing">
+		<part m="on" t="400" />
+		<part m="off" t="200" />
+		<part m="on" t="400" />
+		<part m="off" t="2000" />
+		<repeat c="65535" />
+	</tone>
+		<tone c1="31164" i1="-1772" c2="31164" i2="-1772" d="17" t="reorder">
+		<part m="on" t="400" />
+		<part m="off" t="350" />
+		<part m="on" t="225" />
+		<part m="off" t="525" />
+		<repeat c="65535" />
+	</tone>
+		<tone c1="31164" i1="-1772" d="1" t="busy">
+		<part m="on" t="375" />
+		<part m="off" t="375" />
+		<repeat c="65535" />
+	</tone>
+		<tone c1="31058" i1="-1471" c2="30847" i2="-1557" d="2" t="odial">
+		<part m="on" t="65535" />
+		<repeat c="65535" />
+	</tone>
+		<tone c1="31058" i1="-1471" c2="30847" i2="-1557" d="2" t="idial">
+		<part m="on" t="65535" />
+		<repeat c="65535" />
+	</tone>
+		<tone c1="14876" i1="-5346" d="1" t="recording">
+		<part m="on" t="425" />
+		<part m="off" t="15000" />
+		<repeat c="65535" />
+	</tone>
+</tones>
